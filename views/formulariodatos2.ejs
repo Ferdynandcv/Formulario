@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Datos Empleados Temporales</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="http://localhost:3000">Inicio</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/formulariope">Formulario 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/datos2">Datos Almacenados EP</a>
+              </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="http://localhost:3000/formulariopt">Formulario 2 </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/datos">Datos Almacenados ET</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+
+    <nav class="navbar p-3 mb-10 bg-success text-white">
+        <h2>Almacenado en MongoDB</h2>
+    </nav>
+    <div class="cool-md 7">
+        <table class="table table-borde">
+            <thead>
+                <tr>
+                    <th class="small">No.</th>
+                    <th class="small">Primer  Nombre</th>
+                    <th class="small">Segundo Nombre</th>
+                    <th class="small">Primer Apellido</th>
+                    <th class="small">Segundo Apellido</th>
+                    <th class="small">Apellido Casada</th>
+                    <th class="small">DPI</th>
+                    <th class="small">NIP</th>
+                    <th class="small">Nacimiento</th>
+                    <th class="small">Puesto Nominal</th>
+                    <th class="small">Puesto Funcional</th>
+                    <th class="small">Departamento</th>
+                    <th class="small">Email Institucional</th>
+                    <th class="small">Email Personal</th>
+                    <th class="small">No. Telefono Celular</th>
+                    <th class="small">No. Telefono Casa</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% for(var i = 0; i< personalP.length; i++) { %>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td class="small"><%= personalP[i].nombre %></td>
+                    <td class="small"><%= personalP[i].snombre %></td>
+                    <td class="small"><%= personalP[i].apellido %></td>
+                    <td class="small"><%= personalP[i].sapellido %></td>
+                    <td class="small"><%= personalP[i].apellidoc %></td>
+                    <td class="small"><%= personalP[i].DPI %></td>
+                    <td class="small"><%= personalP[i].NIP %></td>
+                    <td class="small"><%= personalP[i].nacimiento %></td>
+                    <td class="small"><%= personalP[i].pueston %></td>
+                    <td class="small"><%= personalP[i].puestof %></td>
+                    <td class="small"><%= personalP[i].depart %></td>
+                    <td class="small"><%= personalP[i].emailinst %></td>
+                    <td class="small"><%= personalP[i].emailper %></td>
+                    <td class="small"><%= personalP[i].telCelu %></td>
+                    <td class="small"><%= personalP[i].telCasa %></td>
+                </tr>
+
+                <td> 
+                  <a class="small" href="/actualiza2/<%= personalP[i]._id %> " class="btn btn-info" >Actulizar</a>
+
+                  <a class="small" href="/delete2/<%= personalP[i]._id %> " class="btn btn-info" >Eliminar</a>
+                  
+                  <a  class="small" href="/editform2/<%= personalP[i]._id %> " class="btn btn-info" >Editar</a>
+                  
+              </td>
+
+                <% } %>
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

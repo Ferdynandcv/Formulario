@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Formulario Empleados</title>
+</head>
+
+<body>
+
+    <nav class="navbar p-3 mb-10 bg-danger text-white">
+
+        <h2>Editor</h2>
+    </nav>
+
+    <form action="/editform2/<%= personalP._id %>" method="POST">
+
+
+        <div class="form-row">
+            <div class="p-3 col-md-3">
+                <label>Nombre</label>
+                <input type="text" class="form-control" name="nombre"  value="<%= personalP.nombre %>">
+            </div>
+            <div class="p-3 col-md-3">
+                <label>Segundo Nombre</label>
+                <input type="text" class="form-control" name="snombre" value="<%= personalP.snombre %>">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="p-3 col-md-3">
+                <label>Apellido</label>
+                <input type="text" class="form-control" name="apellido" value="<%= personalP.apellido %>">
+            </div>
+
+            <div class="p-3 col-md-3">
+                <label>Segundo Apellido</label>
+                <input type="text" class="form-control" name="sapellido" value="<%= personalP.sapellido %>">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="p-3 col-md-3">
+                <label>Apellido de Casado</label>
+                <input type="text" class="form-control" name="apellidoc" value="<%= personalP.apellidoc %>"> 
+            </div>
+
+            <div class="p-3 col-md-2">
+                <label>DPI</label>
+                <input type="text" class="form-control" name="DPI" value="<%= personalP.DPI %>">
+            </div>
+
+            <div class="p-3 col-md-2">
+                <label>NIP</label>
+                <input type="text" class="form-control" name="NIP" value="<%= personalP.NIP %>">
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="p-3 col-md-3">
+                <label>Fecha de Nacimiento</label>
+                <input type="date" class="form-control" name="nacimiento" value="<%= personalP.nacimiento %>"> 
+            </div>
+
+
+            <div class="p-3 col-md-3">
+                <label>Puesto nominal</label>
+                <input type="text" class="form-control" name="pueston" value="<%= personalP.pueston %>">
+            </div>
+
+            <div class="p-3 col-md-3">
+                <label>Puesto funcional</label>
+                <input type="text" class="form-control" name="puestof" value="<%= personalP.puestof %>">
+            </div>
+        </div>
+
+        <div class="p-3 col-md-3">
+            <label>Departamento</label>
+            <input type="text" class="form-control" name="depart" value="<%= personalP.depart %>">
+        </div>
+
+        <div class="form-row">
+
+            <div class="p-3 col-md-3">
+                <label>Email Institucional</label>
+                <input type="text" class="form-control" name="emailinst" value="<%= personalP.emailinst %>">
+            </div>
+
+            <div class="p-3 col-md-3">
+                <label>Email Personal</label>
+                <input type="text" class="form-control" name="emailper" value="<%= personalP.emailper %>">
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="p-3 col-md-3">
+                <label>Telefono Celular</label>
+                <input type="text" class="form-control" name="telCelu" value="<%= personalP.telCelu %>">
+            </div>
+
+            <div class="p-3 col-md-3">
+                <label>Telefono de Casa </label>
+                <input type="text" class="form-control" name="telCasa" value="<%= personalP.telCasa %>">
+            </div>
+
+        </div>
+
+
+        <div class="form-group col-md-4">
+            <button type="submit" class="btn btn-primary col-md-4">Actulizar</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

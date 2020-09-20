@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Formulario Empleados</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://localhost:3000">Inicio</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/formulariope">Formulario 1 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/datos2">Datos Almacenados EP</a>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:3000/formulariopt">Formulario 2 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/datos">Datos Almacenados ET</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar p-3 mb-10 bg-danger text-white">
+
+    <h2>Formulario 2 Personal Temporal</h2>
+  </nav>
+
+  <form action="/enviadoBD" method="POST">
+
+    <div class="p-3 col-md-4">
+      <label>Nombre</label>
+      <input type="text" class="form-control" name="nombre">
+    </div>
+    <div class="col-md-4">
+      <label>Puesto</label>
+      <input type="text" class="form-control" name="puesto">
+    </div>
+
+    <div class="form-group p-3 col-md-4">
+      <label>Lugar</label>
+      <input type="text" class="form-control" name="lugar">
+    </div>
+
+    <div class="form-group p-3 col-md-4">
+      <label>Fecha</label>
+      <input type="date" class="form-control" name="fecha">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Telefono</label>
+      <input type="text" class="form-control" name="tel">
+    </div>
+
+    </div>
+    <div class="form-group col-md-4">
+      <button type="submit" class="btn btn-primary col-md-4">Enviar informacion</button>
+    </div>
+
+  </form>
+
+
+</body>
+
+</html>

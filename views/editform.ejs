@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Formulario Empleados</title>
+</head>
+
+<body>
+
+  <nav class="navbar p-3 mb-10 bg-danger text-white">
+
+    <h2>Editor</h2>
+  </nav>
+
+  <form action="/editform/<%= personal._id %>" method="POST">
+
+    <div class="p-3 col-md-4">
+      <label>Nombre</label>
+      <input type="text" class="form-control" name="nombre" value="<%= personal.nombre %>">
+    </div>
+    <div class="col-md-4">
+      <label>Puesto</label>
+      <input type="text" class="form-control" name="puesto" value="<%= personal.puesto %>">
+    </div>
+
+    <div class="form-group p-3 col-md-4">
+      <label>Lugar</label>
+      <input type="text" class="form-control" name="lugar"  value="<%= personal.lugar %>">
+    </div>
+
+    <div class="form-group p-3 col-md-4">
+      <label>Fecha</label>
+      <input type="date" class="form-control" name="fecha" value="<%= personal.fecha %>">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Telefono</label>
+      <input type="text" class="form-control" name="tel" value="<%= personal.tel %>">
+    </div>
+
+    </div>
+    <div class="form-group col-md-4">
+      <button type="submit" class="btn btn-primary col-md-4">Actulizar</button>
+    </div>
+
+  </form>
+
+
+</body>
+
+</html>

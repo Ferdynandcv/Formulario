@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Datos Empleados Temporales</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="http://localhost:3000">Inicio</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/formulariope">Formulario 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/datos2">Datos Almacenados EP</a>
+              </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="http://localhost:3000/formulariopt">Formulario 2 </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/datos">Datos Almacenados ET</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+
+    <nav class="navbar p-3 mb-10 bg-success text-white">
+        <h2>Almacenado en MongoDB </h2>
+    </nav>
+    <div class="cool-md 7">
+        <table class="table table-borde">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nombre</th>
+                    <th>Puesto</th>
+                    <th>Lugar</th>
+                    <th>fecha</th>
+                    <th>telefono</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% for(var i = 0; i< personal.length; i++) { %>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%= personal[i].nombre %></td>
+                    <td><%= personal[i].puesto %></td>
+                    <td><%= personal[i].lugar %></td>
+                    <td><%= personal[i].fecha %></td>
+                    <td><%= personal[i].tel %></td>
+                    <td> 
+                        <a href="/actualiza/<%= personal[i]._id %> " class="btn btn-info" >Actulizar</a>
+
+                        <a href="/delete/<%= personal[i]._id %> " class="btn btn-info" >Eliminar</a>
+                        
+                        <a href="/editform/<%= personal[i]._id %> " class="btn btn-info" >Editar</a>
+                        
+                    </td>
+                  
+                </tr>
+                <% } %>
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
